@@ -68,4 +68,30 @@ export default class Timer {
       this._timeAccumulator -= 1;
     }
   }
+
+  public capFrameRate(targetFPS: number): void {
+    const targetFrameTime = 1000 / targetFPS;
+    const currentTime = performance.now();
+    const elapsedTime = currentTime - this._lastTime;
+    let sleepTime: number;
+
+    if (elapsedTime < targetFrameTime) {
+      sleepTime = targetFrameTime - elapsedTime;
+      // Use a sleep function or requestAnimationFrame with a delay to control frame rate.
+    }
+
+    this._lastTime = currentTime + sleepTime;
+  }
+
+  public calculateAverageFPS(intervalInSeconds: number): number {
+    return (this._frameCount / this._timeAccumulator) * intervalInSeconds;
+  }
+
+  public detectFrameRateSpikes(threshold: number): boolean {
+    return this._frameCount > threshold;
+  }
+
+  public detectFrameRateDrops(threshold: number): boolean {
+    return this._frameCount < threshold;
+  }
 }
