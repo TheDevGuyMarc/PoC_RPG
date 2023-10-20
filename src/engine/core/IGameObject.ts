@@ -4,4 +4,5 @@ export default interface IGameObject {
   destroy(): void;
   update(deltaTime: number): void;
   render(): void;
+  debugDraw(): void;
 }

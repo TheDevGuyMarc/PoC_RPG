@@ -76,6 +76,6 @@ export default class Game implements IGame {
       level.render();
     })
 
-    // 4. Load GameObjekts
+    // 4. Load GameObjects
   }
 }

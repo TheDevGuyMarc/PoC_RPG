@@ -31,6 +31,22 @@ export default class GameObject implements IGameObject {
     return this._hasReadyBeenCalled;
   }
 
+  set position(value: Vector2) {
+    this._position = value;
+  }
+
+  set children(value: GameObject[]) {
+    this._children = value;
+  }
+
+  set parent(value: GameObject | null) {
+    this._parent = value;
+  }
+
+  set hasReadyBeenCalled(value: boolean) {
+    this._hasReadyBeenCalled = value;
+  }
+
   /**
    * Add a game object to the child hierarchy
    */
@@ -60,5 +76,11 @@ export default class GameObject implements IGameObject {
    * Render the game object
    */
   public render(): void {
+  }
+
+  /**
+   * Render a debug frame around the game object
+   */
+  public debugDraw(): void {
   }
 }

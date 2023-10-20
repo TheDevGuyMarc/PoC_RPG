@@ -46,14 +46,18 @@ export default class Timer {
     return this._timeAccumulator;
   }
 
-// Call this method at the beginning of each frame
+  /**
+   * Call this method at the beginning of each frame
+   */
   public startFrame(): void {
     const currentTime = performance.now();
     this._deltaTime = (currentTime - this._lastTime) / 1000; // Delta time in seconds
     this._lastTime = currentTime;
   }
 
-  // Call this method at the end of each frame
+  /**
+   * Call this method at the end of each frame
+   */
   public endFrame(): void {
     this._frameCount++;
     this._timeAccumulator += this._deltaTime;
