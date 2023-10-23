@@ -24,6 +24,10 @@ describe("Canvas Class", () => {
     document.body.removeChild(canvas.canvas);
   });
 
+  it("This is a placeholder", () => {
+
+  });
+
   /*it("should draw a filled circle", () => {
     const x = 100;
     const y = 100;

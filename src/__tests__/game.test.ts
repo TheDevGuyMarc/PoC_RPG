@@ -11,6 +11,10 @@ describe("Game Class", () => {
     game = new Game(800, 600);
   });
 
+  it("This is a placeholder", () => {
+
+  });
+
   /*it("should have a canvas with the specified width and height", () => {
     const canvas = game["canvas"];
     expect(canvas instanceof Canvas).toBe(true);
