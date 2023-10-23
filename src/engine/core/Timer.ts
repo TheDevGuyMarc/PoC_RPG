@@ -17,6 +17,7 @@ export default class Timer {
   private _fps: number;
   private _frameCount: number;
   private _timeAccumulator: number;
+  private _sleepTime: number;
 
   constructor() {
     this._lastTime = 0;
@@ -24,6 +25,7 @@ export default class Timer {
     this._fps = 60;
     this._frameCount = 0;
     this._timeAccumulator = 0;
+    this._sleepTime = 0;
   }
 
   get lastTime(): number {
@@ -73,14 +75,13 @@ export default class Timer {
     const targetFrameTime = 1000 / targetFPS;
     const currentTime = performance.now();
     const elapsedTime = currentTime - this._lastTime;
-    let sleepTime: number;
 
     if (elapsedTime < targetFrameTime) {
-      sleepTime = targetFrameTime - elapsedTime;
+      this._sleepTime = targetFrameTime - elapsedTime;
       // Use a sleep function or requestAnimationFrame with a delay to control frame rate.
     }
 
-    this._lastTime = currentTime + sleepTime;
+    this._lastTime = currentTime + this._sleepTime;
   }
 
   public calculateAverageFPS(intervalInSeconds: number): number {

@@ -45,15 +45,8 @@ verwalten und Missionen auswählen können.
 5. Redux: Wenn deine Anwendung einen komplexen Zustand oder globale Variablen benötigt, könnte Redux nützlich sein, um
    den Zustand der Anwendung zu verwalten.
 6. 2D
-    1. Pixi.js: Eine 2D-Webgl-Grafikbibliothek, die hohe Leistung für die Entwicklung von 2D-Spielen und interaktiven
-       Anwendungen bietet.
-    2. Cannon.js: Eine Physik-Engine in JavaScript, die die Simulation von physikalischen Bewegungen und Interaktionen
-       in Spielen ermöglicht.
-    3. Howler.js: Eine Bibliothek für die einfache Integration von Audio- und Musikfunktionalitäten in Spiele.
-7. 3D
-    1. Three.js (optional): Eine JavaScript-Bibliothek zur Erstellung von 3D-Grafiken im Web.
-    2. React Three Fiber (optional): Eine React-Bibliothek, die es ermöglicht, Three.js in React-Anwendungen zu
-       integrieren und zu nutzen.
+    1. Howler.js: Eine Bibliothek für die einfache Integration von Audio- und Musikfunktionalitäten in Spiele.
+    2. MatterJS: Physics Engine
 
 ### Backend (Spring Boot)
 

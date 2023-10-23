@@ -1,4 +1,5 @@
-import GameObject from "../gameobjekt/GameObject";
+import GameObject from "../core/GameObject";
+
 
 export default class Layer {
   private readonly _layerName: string;

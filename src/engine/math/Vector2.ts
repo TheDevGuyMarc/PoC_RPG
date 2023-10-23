@@ -15,6 +15,14 @@ export default class Vector2 {
     return this._y;
   }
 
+  set x(value: number) {
+    this._x = value;
+  }
+
+  set y(value: number) {
+    this._y = value;
+  }
+
   public clone(): Vector2 {
     return new Vector2(this._x, this._y)
   }

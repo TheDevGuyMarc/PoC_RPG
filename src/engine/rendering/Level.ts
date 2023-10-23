@@ -38,7 +38,7 @@ import Layer from "./Layer";
 export default class Level {
   private readonly _levelName: string;
   private _isActive: boolean;
-  private layers: Layer[] = [];
+  private _layers: Layer[] = [];
 
   constructor(levelName: string) {
     this._levelName = levelName;
@@ -51,6 +51,18 @@ export default class Level {
 
   get isActive(): boolean {
     return this._isActive;
+  }
+
+  get layers(): Layer[] {
+    return this._layers;
+  }
+
+  set isActive(value: boolean) {
+    this._isActive = value;
+  }
+
+  set layers(value: Layer[]) {
+    this._layers = value;
   }
 
   /**
@@ -74,7 +86,7 @@ export default class Level {
    */
   createLayer(layerName: string): Layer {
     const layer = new Layer(layerName);
-    this.layers.push(layer);
+    this._layers.push(layer);
     return layer;
   }
 
@@ -82,9 +94,9 @@ export default class Level {
    * Remove a layer from the level
    */
   removeLayer(layer: Layer) {
-    const index = this.layers.indexOf(layer);
+    const index = this._layers.indexOf(layer);
     if (index !== -1) {
-      this.layers.splice(index, 1);
+      this._layers.splice(index, 1);
     }
   }
 
@@ -95,7 +107,7 @@ export default class Level {
    */
   public updateGameObjects(deltaTime: number): void {
     if (this.isActive) {
-      this.layers.forEach((layer) => {
+      this._layers.forEach((layer) => {
         layer.objects.forEach((gameObject) => {
           gameObject.update(deltaTime);
         });
@@ -111,7 +123,7 @@ export default class Level {
       console.log(`Rendering level: ${this._levelName}`);
 
       // Render layers
-      this.layers.forEach((layer) => {
+      this._layers.forEach((layer) => {
         layer.render();
       });
     }
