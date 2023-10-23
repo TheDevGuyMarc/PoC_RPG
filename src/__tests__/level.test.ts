@@ -1,7 +1,8 @@
-import Level from "../src/engine/rendering/Level";
-import Layer from "../src/engine/rendering/Layer";
-import GameObject from "../src/engine/core/GameObject";
-import Vector2 from "../src/engine/math/Vector2";
+import Level from "../engine/rendering/Level";
+import Layer from "../engine/rendering/Layer";
+import GameObject from "../engine/core/GameObject";
+import Vector2 from "../engine/math/Vector2";
+
 
 describe("Level Class", () => {
   let level: Level;

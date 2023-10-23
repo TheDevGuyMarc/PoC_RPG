@@ -1,7 +1,8 @@
-import Game from "../src/engine/core/Game";
 /*import Canvas from "../src/engine/rendering/Canvas";*/
-import {GameState} from "../src/engine/core/GameState";
-import Level from "../src/engine/rendering/Level";
+
+import Game from "../engine/core/Game";
+import {GameState} from "../engine/core/GameState";
+import Level from "../engine/rendering/Level";
 
 describe("Game Class", () => {
   let game: Game;

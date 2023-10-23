@@ -1,6 +1,5 @@
-// Mock performance.now() to control the timing in tests
-import Timer from "../src/engine/core/Timer";
 import { performance } from "perf_hooks";
+import Timer from "../engine/core/Timer";
 
 // Mock performance.now() to control the timing in tests
 jest.spyOn(performance, 'now').mockImplementation(() => {

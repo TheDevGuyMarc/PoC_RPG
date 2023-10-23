@@ -1,4 +1,5 @@
-import Vector2 from "../src/engine/math/Vector2";
+import Vector2 from "../engine/math/Vector2";
+
 
 describe("Vector2 Class", () => {
   it("should have default values (0, 0) when created without parameters", () => {

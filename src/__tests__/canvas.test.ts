@@ -1,7 +1,9 @@
-import CanvasConfig from "../src/engine/rendering/CanvasConfig";
-import Canvas from "../src/engine/rendering/Canvas";
+
 
 // Mock CanvasConfig for testing
+import CanvasConfig from "../engine/rendering/CanvasConfig";
+import Canvas from "../engine/rendering/Canvas";
+
 const mockConfig: CanvasConfig = {
   height: 0,
   width: 0

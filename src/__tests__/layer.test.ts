@@ -1,6 +1,7 @@
-import Layer from "../src/engine/rendering/Layer";
-import GameObject from "../src/engine/core/GameObject";
-import Vector2 from "../src/engine/math/Vector2";
+import Layer from "../engine/rendering/Layer";
+import GameObject from "../engine/core/GameObject";
+import Vector2 from "../engine/math/Vector2";
+
 
 describe("Layer Class", () => {
   let layer: Layer;
