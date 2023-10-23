@@ -48,7 +48,7 @@ describe("Canvas Class", () => {
     expect(`rgb(${pixelColor[0]}, ${pixelColor[1]}, ${pixelColor[2]})`).toBe(color);
   });*/
 
-  i/*t("should draw a line", () => {
+  /*it("should draw a line", () => {
     const x1 = 50;
     const y1 = 50;
     const x2 = 150;
