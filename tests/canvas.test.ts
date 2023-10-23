@@ -12,14 +12,7 @@ describe("Canvas Class", () => {
 
   beforeEach(() => {
     // Create a new canvas for each test
-    const canvasElement = document.createElement("canvas");
-    document.body.appendChild(canvasElement);
-    canvas = new Canvas(canvasElement.id, mockConfig);
-  });
-
-  afterEach(() => {
-    // Clean up after each test
-    document.body.removeChild(canvas.canvas);
+    canvas = new Canvas("1", mockConfig);
   });
 
   it("should draw a filled circle", () => {
