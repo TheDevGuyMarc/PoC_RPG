@@ -1,4 +1,4 @@
-import Character from "../gameobjekt/Character";
+import Character from "../gameobject/Character";
 
 export default class Player {
   private _name: string;

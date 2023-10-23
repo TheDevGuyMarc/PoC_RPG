@@ -1,5 +1,4 @@
 import CanvasConfig from "./CanvasConfig";
-import {text} from "stream/consumers";
 
 export default class Canvas {
   private _canvas: HTMLCanvasElement;
