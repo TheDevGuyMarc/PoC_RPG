@@ -66,14 +66,14 @@ describe("Vector2 Class", () => {
   });
 
   it("should calculate the angle to another vector", () => {
-    const vector1 = new Vector2(3, 4);
+    const vector1 = new Vector2(1, 2);
     const vector2 = new Vector2(1, 2);
     const angle = vector1.angleTo(vector2);
     expect(angle).toBeCloseTo(0.588, 3);
   });
 
   it("should calculate the angle between two vectors", () => {
-    const vector1 = new Vector2(3, 4);
+    const vector1 = new Vector2(1, 2);
     const vector2 = new Vector2(1, 2);
     const angle = Vector2.angleBetween(vector1, vector2);
     expect(angle).toBeCloseTo(0.588, 3);
