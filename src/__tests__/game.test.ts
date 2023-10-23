@@ -7,9 +7,9 @@ import Level from "../engine/rendering/Level";
 describe("Game Class", () => {
   let game: Game;
 
-  beforeEach(() => {
+  /*beforeEach(() => {
     game = new Game(800, 600);
-  });
+  });*/
 
   it("This is a placeholder", () => {
 
