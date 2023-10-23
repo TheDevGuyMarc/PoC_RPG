@@ -1,4 +1,5 @@
 import Layer from "./Layer";
+import Canvas from "./Canvas";
 
 /**
  * Usage:
@@ -118,13 +119,13 @@ export default class Level {
   /**
    * Render the level
    */
-  public render(): void {
+  public render(canvas: Canvas): void {
     if (this._isActive) {
       console.log(`Rendering level: ${this._levelName}`);
 
       // Render layers
       this._layers.forEach((layer) => {
-        layer.render();
+        layer.render(canvas);
       });
     }
   }

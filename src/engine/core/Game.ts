@@ -14,18 +14,42 @@ import Level from "../rendering/Level";
  * game.end();
  */
 export default class Game implements IGame {
-  private canvas: Canvas;
-  private state: GameState;
-  private levels: Level[];
+  private _canvas: Canvas;
+  private _state: GameState;
+  private _levels: Level[];
 
   constructor(width: number, height: number) {
     const config: CanvasConfig = {
       width: width,
       height: height
     }
-    this.canvas = new Canvas("game-canvas", config);
-    this.state = GameState.INITIALIZING;
-    this.levels = [];
+    this._canvas = new Canvas("game-canvas", config);
+    this._state = GameState.INITIALIZING;
+    this._levels = [];
+  }
+
+  get canvas(): Canvas {
+    return this._canvas;
+  }
+
+  set canvas(value: Canvas) {
+    this._canvas = value;
+  }
+
+  get state(): GameState {
+    return this._state;
+  }
+
+  set state(value: GameState) {
+    this._state = value;
+  }
+
+  get levels(): Level[] {
+    return this._levels;
+  }
+
+  set levels(value: Level[]) {
+    this._levels = value;
   }
 
   /**
@@ -34,7 +58,7 @@ export default class Game implements IGame {
    */
   public addLevel(levelName: string): void {
     const level = new Level(levelName);
-    this.levels.push(level);
+    this._levels.push(level);
   }
 
   /**
@@ -42,7 +66,7 @@ export default class Game implements IGame {
    * @param levelName
    */
   public activateLevel(levelName: string): void {
-    this.levels.forEach((level) => {
+    this._levels.forEach((level) => {
       if (level.levelName === levelName) {
         // Build in a Loading Screen for 5 seconds
         level.activate();
@@ -54,12 +78,12 @@ export default class Game implements IGame {
   }
 
   public start(): void {
-    this.state = GameState.RUNNING;
+    this._state = GameState.RUNNING;
     this.gameLoop();
   }
 
   public end(): void {
-    this.state = GameState.END
+    this._state = GameState.END
   }
 
   private gameLoop() {
@@ -72,10 +96,12 @@ export default class Game implements IGame {
     this.activateLevel("Level1")
 
     // Render active level
-    this.levels.forEach((level) => {
-      level.render();
+    this._levels.forEach((level) => {
+      level.render(this.canvas);
     })
 
     // 4. Load GameObjects
+
+    requestAnimationFrame(this.gameLoop.bind(this));
   }
 }

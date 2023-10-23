@@ -1,4 +1,5 @@
 import CanvasConfig from "./CanvasConfig";
+import Level from "./Level";
 
 export default class Canvas {
   private _canvas: HTMLCanvasElement;
@@ -114,5 +115,9 @@ export default class Canvas {
 
   public exportImage(format: "png" | "jpeg" = "png"): string {
     return this._canvas.toDataURL(`image/${format}`);
+  }
+
+  public render(level: Level): void {
+    // Render levels here
   }
 }
