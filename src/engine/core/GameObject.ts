@@ -1,5 +1,6 @@
 import IGameObject from "./IGameObject";
 import Vector2 from "../math/Vector2";
+import Canvas from "../rendering/Canvas";
 
 export default class GameObject implements IGameObject {
   private _position: Vector2;
@@ -75,12 +76,12 @@ export default class GameObject implements IGameObject {
   /**
    * Render the game object
    */
-  public render(): void {
+  public render(canvas: Canvas): void {
   }
 
   /**
    * Render a debug frame around the game object
    */
-  public debugDraw(): void {
+  public debugDraw(canvas: Canvas): void {
   }
 }

@@ -1,4 +1,5 @@
 import GameObject from "../core/GameObject";
+import Canvas from "./Canvas";
 
 
 export default class Layer {
@@ -31,9 +32,9 @@ export default class Layer {
   }
 
   // Method to render the objects in the layer
-  public render(): void {
+  public render(canvas: Canvas): void {
     this._objects.forEach((gameObject) => {
-      gameObject.render();
+      gameObject.render(canvas);
     });
   }
 }

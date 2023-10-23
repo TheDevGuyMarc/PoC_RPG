@@ -1,121 +1,127 @@
-# POC RPG
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
-# Strategie-Rollenspiel (RPG)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-## Spielkonzept
+# PoC RPG
 
-Entwickle ein rundenbasiertes, taktisches RPG, bei dem der Spieler eine Gruppe von Helden kontrolliert, gegen Feinde
-kämpft, Missionen erfüllt und die Charaktere verbessert.
+A brief description of what this project does and who it's for
 
-## Funktionalitäten
+## Demo
 
-1. Charakterauswahl und -verbesserung:
-    1. Spieler können aus verschiedenen Charakterklassen wie Krieger, Magier, Heiler usw. wählen.
-    2. Charaktere können verbessert, mit Ausrüstung ausgestattet und Fähigkeiten aufgewertet werden.
-2. Missionen und Quests:
-    1. Spieler können Missionen annehmen, um Erfahrung, Beute und Fortschritt im Spiel zu erhalten.
-    2. Missionen können verschiedene Ziele haben, wie das Besiegen von Monstern, das Retten von NPCs oder das Sammeln
-       von Gegenständen.
-3. Rundenbasierte Kämpfe:
-    1. Kämpfe finden in rundenbasierten Schlachten statt, bei denen Spieler und Feinde abwechselnd handeln.
-    2. Spieler können Aktionen wie Angriff, Verteidigung, Zauber wirken usw. auswählen.
-4. Karten- und Levelsystem:
-    1. Das Spiel kann verschiedene Karten mit unterschiedlichen Umgebungen und Herausforderungen bieten.
-    2. Spieler müssen durch Karten navigieren, um Missionen abzuschließen und die Handlung voranzutreiben.
-5. In-Game-Währung und Geschäfte:
-    1. Spieler verdienen Gold oder andere Währungen durch Kämpfe und Missionen.
-    2. Die Währung kann für den Kauf von Ausrüstung, Gegenständen und Upgrades verwendet werden.
-6. Highscore-Liste und Wettbewerbe:
-    1. Implementiere eine Highscore-Liste, um die Leistungen der Spieler zu verfolgen.
-    2. Organisiere wöchentliche oder monatliche Wettbewerbe, um die besten Spieler zu belohnen.
+Insert gif or link to demo
 
-## Technologien
+## Tech Stack
 
-### Frontend (React)
+**Client:**
 
-Verwende React für die Erstellung einer ansprechenden Benutzeroberfläche, auf der Spieler das Spiel spielen, Charaktere
-verwalten und Missionen auswählen können.
+- React
+- Typescript
+- Axios
+- Websocket (ws)
+- Howler.js
+- i18n
 
-1. React: Das Haupt-Framework für die Erstellung der Benutzeroberfläche und die Komponentenstrukturierung.
-2. React Router: Zur Implementierung von Routing-Funktionalitäten in deiner React-Anwendung, insbesondere wenn
-   verschiedene Seiten oder Ansichten benötigt werden.
-3. Material-UI: Eine UI-Bibliothek mit vorgefertigten Komponenten und Designs, um eine ansprechende Benutzeroberfläche
-   zu erstellen.
-4. Axios: Eine Bibliothek, um HTTP-Anfragen an das Backend zu senden und die Antworten zu verarbeiten.
-5. Redux: Wenn deine Anwendung einen komplexen Zustand oder globale Variablen benötigt, könnte Redux nützlich sein, um
-   den Zustand der Anwendung zu verwalten.
-6. 2D
-    1. Howler.js: Eine Bibliothek für die einfache Integration von Audio- und Musikfunktionalitäten in Spiele.
-    2. MatterJS: Physics Engine
+**Server:**
 
-### Backend (Spring Boot)
+- Spring Boot
+- Java
+- Spring Data JPA
+- Spring Security
+- Spring Web
+- Spring Boot Dev Tools
+- Spring Boot Actuator
+- Lombok
+- Websocket
+- MariaDB Driver
+- Mailer
 
-Nutze Spring Boot, um das Backend zu erstellen, das für die Verarbeitung von Spiellogik, Datenbankintegration und
-Nutzermanagement verantwortlich ist.
+## Features
 
-1. Spring Boot: Ein Framework für die Entwicklung von Java-basierten, webbasierten Anwendungen, das viele Funktionen für
-   die Backend-Entwicklung bereitstellt.
-2. Spring Data JPA: Eine Bibliothek, die die Datenbankintegration vereinfacht und Objekt-zu-Datenbank-Zuordnungen
-   ermöglicht.
-3. Spring Security: Zur Implementierung von Sicherheitsfunktionen und Benutzerauthentifizierung.
-4. Spring Web: Bietet Unterstützung für die Erstellung von RESTful-Webdiensten.
-5. Spring Boot DevTools: Ein nützliches Toolkit für die Entwicklung, das den Entwicklungsprozess vereinfacht.
-6. Lombok: Utility Bibliothek
-7. WebSocket (für Echtzeitkommunikation): WebSocket-Bibliotheken wie Spring Websocket können für Echtzeitkommunikation
-   im Spiel nützlich sein.
+- 2D Top Down Rendering
+- 2D Physics (coming soon)
+- Mouse & Keyboard Input (coming soon)
+- Logging (coming soon)
+- Profiling (coming soon)
+- Platform Detection (coming soon)
+- Multiplayer (coming soon)
+- Particle System (coming soon)
+- Asset Management (coming soon)
+- Audio 2D (coming soon)
+- NPC System (coming soon)
+- Combat System (coming soon)
+- Progression System (coming soon)
+- Item System (coming soon)
+- Character Creation System (Heavily Customizable) (coming soon)
+- Cut Scenes (coming soon)
+- Equipment System (coming soon)
+- Economy System (coming soon)
+- Crafting System (coming soon)
+- Achievement System (coming soon)
+- Events & Seasonal Content System (coming soon)
+- Localization (coming soon)
+- Pet & Companion System (coming soon v.1.1.0)
+- Mount System (coming soon v.1.1.0)
+- Dungeons & Raids (coming soon v.1.1.0)
+- Environment System (coming soon v.1.1.0)
+- Alignment System (coming soon v.1.1.0)
+- Editor (coming soon v.1.1.0)
 
-### Datenbank (z. B. PostgreSQL)
+## Roadmap
 
-Verwende eine relationale Datenbank, um Charakterdaten, Spielfortschritt und Statistiken zu speichern.
+- Additional browser support
 
-### Docker
-
-Containerisiere die Anwendung, um sie einfach zu skalieren und zu verwalten.
-
-### CI/CD
-
-Implementiere Continuous Integration und Continuous Deployment für effiziente Aktualisierungen und Bereitstellungen des
-Spiels.
-
-### Monitoring
-
-Setze Monitoring-Tools ein, um die Leistung des Spiels zu überwachen und auf Engpässe oder Probleme zu reagieren.
-
-### Dokumentation und Testing
-
-Erstelle ausführliche Dokumentationen für Code, APIs und Benutzer. Implementiere umfassende Tests, um die Qualität und
-Zuverlässigkeit des Spiels sicherzustellen.
-
-## Tutorials & Konzepte
-
-- [GameDEV TS](https://javascript.plainenglish.io/gamedev-patterns-and-algorithms-in-action-with-typescript-d29b913858e)
-- [Intro to GameDEV TS](https://nosleepjavascript.com/intro-to-gamedev/)
-- [Javascript Game Development](https://www.freecodecamp.org/news/learn-javascript-game-development-full-course/)
-- [What is Game Development](https://www.freecodecamp.org/news/what-is-game-development/)
-- [Game Dev Principals](https://www.freecodecamp.org/news/learn-game-design-principles-from-valve-portal-developers/)
-- [Bug Mitigation](https://www.freecodecamp.org/news/how-to-write-fewer-bugs-tips-for-game-developers-82e3d742f6f7/)
-- [Intro to Game Dev Javascript](https://www.freecodecamp.org/news/intro-to-game-development-with-javascript/)
-- [Advanced React Patterns by game dev](https://www.freecodecamp.org/news/learn-advanced-react-patterns-by-developing-a-game-with-sprite-animation-5dc072886975/)
-- [Misc Tips and Tricks](https://www.gamedev.net/forums/topic/711769-learning-typescript/)
-- [Resources](https://github.com/stevinz/awesome-game-engine-dev#javascript)
+- Add more integrations
 
 ## Documentation
 
-### Object Hierarchy
+[Documentation](https://linktodocumentation)
 
-![Object Hierarchy.drawio.png](docs%2FObject%20Hierarchy.drawio.png)
+## Run Locally
 
-### How to use the "engine" part of the game
+Clone the project
 
-1. Create a canvas / canvas component (React, Angular, Vue)
-2. Create a new game instance on load of the canvas / canvas component
-3. Initialize the canvas in the constructor
-4. Implement a game loop like you want
-5. Load Input Manager
-6. Load Audio Manager
-7. Load levels
-8. Activate a level
-9. Create layers for level (Skybox, Ground, 1st Floor, UI, Camera)
-10. Create GameObjects
-11. Add GameObjects to respective layers
-12. Update GameObjects in the game loop
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## FAQ
+
+### Question 1
+
+Answer 1
+
+### Question 2
+
+Answer 2
