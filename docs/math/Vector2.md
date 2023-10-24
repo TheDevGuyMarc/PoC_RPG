@@ -1,98 +1,91 @@
 # Vector2 Class
 
-The Vector2 class represents a 2D vector in a Cartesian coordinate system. It provides methods for vector operations, such as addition, subtraction, scalar multiplication, magnitude calculation, normalization, dot product, and angle calculations.
-
-## Class Definition
-
-```typescript
-export default class Vector2 {
-// Properties
-private _x: number;
-private _y: number;
-
-// Constructor
-constructor(x: number = 0, y: number = 0);
-
-// Getter and Setter Methods
-get x(): number;
-get y(): number;
-set x(value: number);
-set y(value: number);
-
-// Methods
-public clone(): Vector2;
-public add(other: Vector2): Vector2;
-public subtract(other: Vector2): Vector2;
-public multiplyScalar(scalar: number): Vector2;
-public magnitude(): number;
-public normalize(): Vector2;
-public dot(other: Vector2): number;
-public angleTo(other: Vector2): number;
-public static angleBetween(vector1: Vector2, vector2: Vector2): number;
-}
-```
-
-## Class Description
-
-The Vector2 class is designed to represent 2D vectors in a Cartesian coordinate system. It offers various vector operations to manipulate and calculate properties of 2D vectors.
+The `Vector2` class represents a 2D vector with `x` and `y` components.
 
 ## Constructor
 
-``constructor(x: number = 0, y: number = 0)``
+### `constructor(x: number = 0, y: number = 0)`
 
-Initializes a new Vector2 instance with optional x and y components.
+Creates a new `Vector2` instance with optional initial `x` and `y` components. If no values are provided, the vector is initialized as the origin (0, 0).
 
-## Getter and Setter Methods
+## Properties
 
-``x``: Gets or sets the x component of the vector.
+### `x: number`
 
-``y``: Gets or sets the y component of the vector.
+Gets or sets the `x` component of the vector.
+
+### `y: number`
+
+Gets or sets the `y` component of the vector.
 
 ## Methods
 
-``clone()``: Creates a new Vector2 instance that is a copy of the current vector.
+### `clone(): Vector2`
 
-``add(other: Vector2)``: Returns a new Vector2 resulting from the addition of the current vector and another vector.
+Creates a new `Vector2` instance that is a copy of the current vector.
 
-``subtract(other: Vector2)``: Returns a new Vector2 resulting from the subtraction of another vector from the current vector.
+### `equals(other: Vector2): boolean`
 
-``multiplyScalar(scalar: number)``: Returns a new Vector2 resulting from scalar multiplication of the current vector.
+Checks if the current vector is equal to another `Vector2` instance based on the equality of their `x` and `y` components.
 
-``magnitude()``: Calculates and returns the magnitude (length) of the vector.
+### `add(other: Vector2): Vector2`
 
-``normalize()``: Returns a normalized vector, or a zero vector if the current vector has a magnitude of 0.
+Adds another `Vector2` to the current vector and returns a new `Vector2` representing the sum.
 
-``dot(other: Vector2)``: Calculates and returns the dot product of the current vector and another vector.
+### `subtract(other: Vector2): Vector2`
 
-``angleTo(other: Vector2)``: Calculates and returns the angle in radians between the current vector and another vector.
+Subtracts another `Vector2` from the current vector and returns a new `Vector2` representing the difference.
 
-``static angleBetween(vector1: Vector2, vector2: Vector2)``: Calculates and returns the angle in radians between two specified vectors.
+### `multiplyScalar(scalar: number): Vector2`
 
-## Usage
+Multiplies the vector by a scalar value and returns a new `Vector2` with the scaled components.
+
+### `magnitude(): number`
+
+Calculates the magnitude (length) of the vector using the Euclidean distance formula.
+
+### `normalize(): Vector2`
+
+Normalizes the vector to have a magnitude of 1 while preserving its direction.
+
+### `dot(other: Vector2): number`
+
+Calculates the dot product of the current vector and another `Vector2`.
+
+### `angleTo(other: Vector2): number`
+
+Calculates the angle in radians between the current vector and another `Vector2`.
+
+### `distanceTo(other: Vector2): number`
+
+Calculates the Euclidean distance between the current vector and another `Vector2`.
+
+## Static Methods
+
+### `angleBetween(vector1: Vector2, vector2: Vector2): number`
+
+Calculates the angle in radians between two `Vector2` instances.
+
+## Example Usage
 
 ```typescript
-// Usage of the Vector2 class
+const vectorA = new Vector2(3, 4);
+const vectorB = new Vector2(1, 2);
 
-const vector1 = new Vector2(3, 4);
-const vector2 = new Vector2(1, 2);
+const sum = vectorA.add(vectorB);
+const length = vectorA.magnitude();
+const normalized = vectorA.normalize();
+const dotProduct = vectorA.dot(vectorB);
+const angle = vectorA.angleTo(vectorB);
+const distance = vectorA.distanceTo(vectorB);
 
-// Vector addition
-const result = vector1.add(vector2);
-console.log(result.x, result.y); // Output: 4, 6
+const angleBetween = Vector2.angleBetween(vectorA, vectorB);
 
-// Magnitude calculation
-const mag = vector1.magnitude();
-console.log(mag); // Output: 5
-
-// Normalization
-const normalized = vector1.normalize();
-console.log(normalized.x, normalized.y); // Output: 0.6, 0.8
-
-// Dot product
-const dotProduct = vector1.dot(vector2);
-console.log(dotProduct); // Output: 11
-
-// Angle calculation
-const angle = vector1.angleTo(vector2);
-console.log(angle); // Output: 0.5880026035475675 (in radians)
+console.log(sum); // Vector2 { x: 4, y: 6 }
+console.log(length); // 5
+console.log(normalized); // Vector2 { x: 0.6, y: 0.8 }
+console.log(dotProduct); // 11
+console.log(angle); // 0.5880026035475675
+console.log(distance); // 2.23606797749979
+console.log(angleBetween); // 0.5880026035475675
 ```
